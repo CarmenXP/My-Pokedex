@@ -21,14 +21,17 @@ const PokeCard = ({URL}) => {
             <img src={pokemon?.sprites.other['official-artwork']['front_default']} alt={pokemon?.name} />
         </div>
         <section className='body_card'>
-            <h3>P{pokemon?.name}</h3>
-            <ul>
+            <h2>{pokemon?.name.toUpperCase()}</h2>
+            <div>
                 {
                     pokemon?.types.map(slot =>(
-                        <li key={slot.type.url}>{slot.type.name}</li>
+                        <span key={slot.type.url}>
+                            {slot.type.name }/
+                        </span>
                     ))
                 }
-            </ul>
+            </div>
+            <h3>Tipo</h3>
         </section>
         <footer>
             <ul>
