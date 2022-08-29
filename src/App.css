@@ -15,19 +15,57 @@ body{
 /*Home enter name*/
 
 .home{
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  position: relative;
   height: 100vh;
+  background-color: #0f0f0f;
+  justify-content: center;
+  align-items: center;
+  
 }
 .poke_img{
-  width: 100%;
-  height: 200px;
+  display: flex;
+  width: 90%;
+  height: 80%;
+ 
 }
-img{
+.poke_img img{
   width: 100%;
   height: 100%;
-  object-fit:fill
+  object-fit: fill;
 }
+.content_form{
+  width: 325px;
+  background-color: #0f0f0f;
+  opacity: .8;
+  color: rgb(240, 247, 247);
+  position: absolute;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 5px;
+}
+.content_form h1{
+  margin: 15px 0;
+}
+.content_form p{
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.content_form input, .content_form button{
+  padding: 9px;
+  border: none;
+  margin-bottom: 8px;
+}
+.content_form button{
+  background-color:rgb(160, 156, 156);
+  cursor: pointer;
+}
+.content_form input{
+  outline: none;
+}
+
+
 /*header*/
 .pokeball{
   width: 100%;
@@ -80,6 +118,11 @@ img{
 }
 .body_card{
   text-align: center;
+}
+.img_pokemon img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 
