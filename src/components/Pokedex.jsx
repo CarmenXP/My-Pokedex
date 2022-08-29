@@ -15,7 +15,10 @@ const Pokedex = () => {
   console.log(pokemons)
   return (
     <div className='pokedex'>
-      <h1>Pokedex</h1>
+      <header className='pokeball'>
+        <img src='https://i.pinimg.com/564x/f1/7b/f9/f17bf97a2fd56e60dead65d5521a8a09.jpg'/>
+        <img src='https://logos-world.net/wp-content/uploads/2020/05/Pokemon-Symbol.jpg'/>
+      </header>
       <div className="cards-container">
         {
           pokemons?.map(pokemon =>(

@@ -19,6 +19,7 @@ const PokeCard = ({URL}) => {
     <div className='card'>
         <div className="img_pokemon">
             <img src={pokemon?.sprites.other['official-artwork']['front_default']} alt={pokemon?.name} />
+            
         </div>
         <section className='body_card'>
             <h2>{pokemon?.name.toUpperCase()}</h2>

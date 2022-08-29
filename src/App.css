@@ -28,6 +28,23 @@ img{
   height: 100%;
   object-fit:fill
 }
+/*header*/
+.pokeball{
+  width: 100%;
+  display: flex;
+  background-color: black;
+  
+}
+.pokeball img{
+  margin-left: 10px;
+}
+.pokeball img:nth-child(1){
+  width: 80px;
+  border-radius: 50%;
+}
+.pokeball img:nth-child(2){
+  width: 145px;
+}
 
 /*Cards*/
 
@@ -35,7 +52,7 @@ img{
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  
+  margin-top: 50px;
   justify-content: space-evenly;
 }
 
