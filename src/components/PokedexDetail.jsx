@@ -1,8 +1,13 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const PokedexDetail = () => {
+
+  const {name} = useParams()
   return (
-    <div>PokedexDetail</div>
+    <div>
+      <h1>{name}</h1>
+    </div>
   )
 }
 
