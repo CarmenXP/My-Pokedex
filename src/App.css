@@ -10,6 +10,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: rgb(48, 44, 44);
 }
 /*Home enter name*/
@@ -305,15 +306,86 @@ p, h2, h3, h4{
 /*Detail*/
 .detail_container{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  background-color: #3c3842;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .poke_detail{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  background-color: darkgray;
+  max-width: 550px;
+  min-width: 300px;
+  border-bottom: 1px solid gray;
 }
 .poke_detail img{
   width: 75%;
+}
+.poke_list li{
+  
+  margin-bottom: 10px;
+  padding: 8px;
+  text-align:center
+}
+.poke_list li span{
+  
+  margin: 0 10px ;
+  font-size: 18px;
+}
+.poke_stats{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid gray;
+  max-width: 100%;
+  min-width: 300px;
+  padding: 25px 50px 25px 20px;
+  margin: 20px 0px;
+}
+.poke_stats h2{
+  margin: 0px;
+  margin-bottom: 15px;
+}
+.poke_stats progress{
+  height: 10px;
+  background-color: #2adad1;
+  
+}
+.progress_bar{
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.poke_stats label{
+  margin-right: 10px;
+}
+.move{
+  width: 100%;
+  text-align: left;
+  margin-left: 65px;
+  margin-bottom: 10px;
+}
+.poke_movements{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 550px;
+  min-width: 300px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 25px;
+  padding: 20px 20px;
+  
+}
+.poke_movements span{
+  padding: 8px 12px;
+  margin: 5px 4px;
+  background-color: #242323;
+  border-radius: 15px;
+  
 }
