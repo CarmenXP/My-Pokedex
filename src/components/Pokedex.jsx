@@ -6,33 +6,40 @@ import SearchBars from './SearchBars'
 
 
 const Pokedex = () => {
+
   const [pokemons, setPokemons]= useState()
   const [pokeSearch, setPokeSearch] = useState()
+  const [optionType, setOptionType] = useState('All')
+
   const nameTrainer = useSelector(state=> state.nameTrainer)
-  
 
   useEffect(() => {
 
-    if(pokeSearch){
+    if(optionType !== 'All'){
+      const URL = `https://pokeapi.co/api/v2/type/${optionType}`
+      axios.get(URL)
+      .then( res =>{
+        const arr = res.data.pokemon.map(e => e.pokemon)
+        setPokemons({results:arr})
+      })
+      .catch(err => console.log(err))
+    }else if(pokeSearch){
       const url = `https://pokeapi.co/api/v2/pokemon/${pokeSearch}`
       const obj = {
-        results:[
-          {
-            url
-          }
-        ]
+        results: [{url}]
       }
       setPokemons(obj)
-    }else{
-      URL= 'https://pokeapi.co/api/v2/pokemon'
+    } else{
+      const URL = 'https://pokeapi.co/api/v2/pokemon/'
       axios.get(URL)
       .then(res => setPokemons(res.data))
-      .catch(err =>  console.log(err))
+      .catch(err => console.log(err))
     }
 
-  }, [pokeSearch])
+
+  }, [pokeSearch, optionType])
   console.log("desde pokemons",pokemons)
-  console.log("desde pokeSearch", pokeSearch)
+ // console.log("desde pokeSearch", pokeSearch)
   
   
   return (
@@ -42,12 +49,12 @@ const Pokedex = () => {
         <img src='https://logos-world.net/wp-content/uploads/2020/05/Pokemon-Symbol.jpg'/>
         <p>Hola, {nameTrainer}</p>
       </header>
-      <SearchBars setPokeSearch={setPokeSearch}/>
+      <SearchBars setPokeSearch={setPokeSearch} setOptionType={setOptionType} optionType={optionType}/>
       <div className="cards-container">
         {
           pokemons?.results.map(pokemon =>(
             <PokeCard
-              key = {pokemon.name}
+              key = {pokemon.url}
               URL = {pokemon.url}
               
             />

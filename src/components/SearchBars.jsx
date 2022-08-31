@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 
-const SearchBars = ({setPokeSearch}) => {
+const SearchBars = ({setPokeSearch, setOptionType, optionType}) => {
 
     const [listItems, setListItems] = useState()
 
@@ -15,26 +15,34 @@ const SearchBars = ({setPokeSearch}) => {
 
     const handleSubmit = e=>{
         e.preventDefault()
-        const inputValue = e.target.searchInput.value.trim().toLowerCase()
-        setPokeSearch(inputValue)
-        console.log(inputValue)
-        
+        setPokeSearch(e.target.searchInput.value.trim().toLowerCase())
+        setOptionType('All')  
+        e.target.searchInput.value = ''
+    }
+
+    const handleChange = e =>{
+        setOptionType(e.target.value)
+        setPokeSearch('')
     }
   return (
     <div className='content_searches'>
-    <div className="searches">
-        <form className="search-bar" onSubmit={handleSubmit}>
-            <input type ='text' placeholder='Enter a Pokemon'  id='searchInput'/>
-            <button><i className='bx bx-search-alt'></i></button>
-        </form>
-        <div className="select_pokemon">
-            <select>
-                <option value='0'>All pokemons</option>
-                <option value= '1'>0</option>
-            </select>
+        <div className="searches">
+            <form className="search-bar" onSubmit={handleSubmit}>
+                <input type ='text' placeholder='Enter a Pokemon'  id='searchInput'/>
+                <button><i className='bx bx-search-alt'></i></button>
+            </form>
+            <div className="select_pokemon">
+                <select  value={optionType} onChange={handleChange}>
+                    <option value='All'>All</option>
+                    {
+                        listItems?.map(item =>(
+                            <option key={item.name} value={item.name}>{item.name}</option>
+                        ))
+                    }
+                </select>
+            </div>
         </div>
     </div>
-</div>
   )
 }
 
