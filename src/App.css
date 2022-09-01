@@ -36,15 +36,19 @@ body{
   height: 100%;
   object-fit: fill;
 }
+.content_none{
+  display: none;
+}
 .content_form{
   width: 325px;
   background-color: #0f0f0f;
-  opacity: .8;
+  opacity: .9;
   color: rgb(240, 247, 247);
   position: absolute;
   text-align: center;
   padding: 20px 0;
   border-radius: 5px;
+  z-index: 100;
 }
 .content_form h1{
   margin: 15px 0;
@@ -53,19 +57,34 @@ body{
   font-size: 20px;
   margin-bottom: 16px;
 }
-.content_form input, .content_form button{
+.content_form input, .btn_send{
   padding: 9px;
   border: none;
   margin-bottom: 8px;
 }
-.content_form button{
+.btn_send{
   background-color:rgb(160, 156, 156);
   cursor: pointer;
 }
 .content_form input{
   outline: none;
 }
-
+.btn_press{
+  position: absolute;
+  width: 200px;
+  padding: 15px 20px;
+  border-radius: 25px;
+  background-color: #392cf0;
+  opacity: .85;
+  border:none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition-duration: 0.3s
+}
+.btn_press:hover{
+  background-color: #691080;
+}
 
 /*header*/
 .pokeball{
