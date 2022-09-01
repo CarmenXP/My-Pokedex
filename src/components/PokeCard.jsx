@@ -38,7 +38,7 @@ const PokeCard = ({URL}) => {
                     ))
                 }
             </div>
-            <h3>Tipo</h3>
+            <h3 className={`text_${pokemon?.types[0].type.name}`}>Tipo</h3>
         </section>
         <footer>
             <ul>
@@ -47,6 +47,7 @@ const PokeCard = ({URL}) => {
                         <StatPokemon
                             key={stat.url}
                             infoStat ={stat}
+                            color = {`text_${pokemon?.types[0].type.name}`}
                         />
                     ))
                 }

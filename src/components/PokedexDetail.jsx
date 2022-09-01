@@ -58,7 +58,10 @@ const PokedexDetail = () => {
           {
             pokeInfo?.stats.map(x =>(
               <div className='progress_bar'>
-                <label htmlFor={x.stat.name}><strong>{x.stat.name}</strong></label>
+                
+                <div>
+                  <label htmlFor={x.stat.name}><strong>{x.stat.name}</strong></label>
+                </div>
                 <progress className='progress' id={x.stat.name} max="150" value={x['base_stat']}>{x['base_stat']}</progress>
               </div>
          

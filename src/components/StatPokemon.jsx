@@ -1,9 +1,9 @@
 import React from 'react'
 
-const StatPokemon = ({infoStat}) => {
+const StatPokemon = ({infoStat, color}) => {
   return (
     <li>
-        <h4>{infoStat.stat.name}</h4>
+        <h4 className={color}>{infoStat.stat.name}</h4>
         <p>{infoStat.base_stat}</p>
     </li>
   )

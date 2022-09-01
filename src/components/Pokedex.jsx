@@ -47,9 +47,10 @@ const Pokedex = () => {
       <header className='pokeball'>
         <img src='https://i.pinimg.com/564x/f1/7b/f9/f17bf97a2fd56e60dead65d5521a8a09.jpg'/>
         <img src='https://logos-world.net/wp-content/uploads/2020/05/Pokemon-Symbol.jpg'/>
-        <p>Hola, {nameTrainer}</p>
+        
       </header>
       <SearchBars setPokeSearch={setPokeSearch} setOptionType={setOptionType} optionType={optionType}/>
+      <h1 className='name'>Hello, {nameTrainer}!</h1>
       <div className="cards-container">
         {
           pokemons?.results.map(pokemon =>(

@@ -14,7 +14,10 @@ body{
   background-color: rgb(48, 44, 44);
 }
 /*Home enter name*/
-
+.name{
+  color: white;
+  margin-left: 20px;
+}
 .home{
   width: 100%;
   display: flex;
@@ -85,12 +88,17 @@ body{
 .btn_press:hover{
   background-color: #691080;
 }
+/*POKEDEX*/
+.pokedex{
+  width: 100%;
+}
 
 /*header*/
 .pokeball{
   width: 100%;
   display: flex;
   background-color: black;
+  
   
 }
 .pokeball img{
@@ -103,25 +111,28 @@ body{
 .pokeball img:nth-child(2){
   width: 145px;
 }
-/**Serch bars*/
+/**Serch bars
 .content_searches{
 
   display: flex;
   flex-direction: column;
-}
+}*/
 .searches{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 35px 0;
 }
 .search-bar{
-  margin-right: 20px;
+  margin-right: 35px;
 }
 .search-bar input{
   padding: 8px 5px;
   border:none;
   outline: none;
+  width: 170px;
+  background-color: rgb(231, 227, 227);
 }
 .search-bar button{
   padding: 8px 9px;
@@ -133,8 +144,9 @@ body{
 }
 .select_pokemon select{
   height: 31px;
-  width: 150px;
+  width: 180px;
   outline: none;
+  background-color: rgb(231, 227, 227);
 }
 
 
@@ -145,6 +157,7 @@ body{
   flex-wrap: wrap;
   gap: 25px;
   margin-top: 50px;
+  margin-bottom: 50px;
   justify-content: space-evenly;
 }
 
@@ -157,7 +170,7 @@ body{
   align-items: center;
   background: #272626;
   box-shadow: 3px 3px 5px #1b1a1a, -3px -3px 5px #2b2b2b;
-
+  cursor: pointer;
 }
 
 .bg_normal{
@@ -266,10 +279,10 @@ body{
   color: #363faf;
 }
 .bg_dark{
-  box-shadow: 3px 3px 5px #030b7e, -3px -3px 5px #1b1a1a;
+  box-shadow: 3px 3px 5px #040ea0, -3px -3px 5px #1b1a1a;
 }
 .text_dark{
-  color: #030b7e;
+  color: #1520b3;
 }
 .bg_unknown{
   box-shadow: 3px 3px 5px #af0864, -3px -3px 5px #1b1a1a;
@@ -329,7 +342,7 @@ p, h2, h3, h4{
   justify-content: center;
   align-items: center;
   max-width: 80%;
-  background-color: #3c3842;
+  background-color: #2a272e;
   color: white;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -363,18 +376,25 @@ p, h2, h3, h4{
   border-bottom: 1px solid gray;
   max-width: 100%;
   min-width: 300px;
-  padding: 25px 50px 25px 20px;
+  padding: 25px 0px 25px 20px;
   margin: 20px 0px;
 }
 .poke_stats h2{
   margin: 0px;
   margin-bottom: 15px;
 }
-.poke_stats progress{
+progress[value] {
   height: 10px;
-  background-color: #2adad1;
-  
 }
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+  progress[value]::-webkit-progress-bar {
+    background-color: rgb(202, 202, 211);
+  }  
 .progress_bar{
   display: flex;
   align-items: center;
@@ -396,7 +416,6 @@ p, h2, h3, h4{
   justify-content: space-around;
   max-width: 550px;
   min-width: 300px;
-  border-bottom: 1px solid gray;
   margin-bottom: 25px;
   padding: 20px 20px;
   
