@@ -22,7 +22,7 @@ console.log("páginas",pageNumbers)
                 ?(<ul className="pagination">
                     {pageNumbers.map(number =>(
                         <li key={number}>
-                            <button onClick={()=>paginate(number)}>
+                            <button className ='pagination_btn' onClick={()=>paginate(number)}>
                                 {number}
                             </button>
                         </li>

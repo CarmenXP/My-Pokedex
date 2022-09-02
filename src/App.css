@@ -428,13 +428,29 @@ progress[value] {
   
 }
 nav{
-  background-color: #919090;
+  background-color: #0e0d0d;
   width: 100%;
-  height: 60px;
+  height: 75px;
 }
 
 .pagination{
   display: flex;
   color: white;
   height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.pagination_btn{
+  padding: 10px 14px;
+  border-radius: 50px;
+  border:none ;
+  margin: 3.5px;
+  cursor: pointer;
+  background-color: #302e2e;
+  color: white;
+  font-size: 16px;
+  transition-duration: 0.3s
+}
+.pagination_btn:hover{
+  background-color: #919090;
 }
