@@ -10,9 +10,9 @@ const Pagination = ({cardsPerPage, cards, paginate}) => {
     
    
 
-console.log(cardsPerPage)
-console.log("length del arra",totalCards)
-console.log("CARDS.....",cards)
+
+console.log("longitud del array....",totalCards)
+console.log("CARDS en pag.....",cards)
 console.log("páginas",pageNumbers)
   return (
     <nav>

@@ -27,6 +27,7 @@ const Pokedex = () => {
       .then( res =>{
         const arr = res.data.pokemon.map(e => e.pokemon)
         setPokemons({results:arr})
+        setCurrentPage(1)
       })
       .catch(err => console.log(err))
     }else if(pokeSearch){
@@ -35,17 +36,20 @@ const Pokedex = () => {
         results: [{url}]
       }
       setPokemons(obj)
+      setCurrentPage(1)
     } else{
       const URL = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=60'
       axios.get(URL)
       .then(res => setPokemons(res.data))
       .catch(err => console.log(err))
+      setCurrentPage(1)
     }
 
 
   }, [pokeSearch, optionType])
   console.log("desde pokemons",pokemons)
  // console.log("desde pokeSearch", pokeSearch)
+ console.log("página",currentPage)
   
   return (
     <div  className='pokedex'>
